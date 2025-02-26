@@ -22,7 +22,13 @@ function demnayhair_tailwind_enqueue_scripts() {
         array(), 
         filemtime(get_stylesheet_directory() . '/dist/tailwind.css')
     );
-    wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+    wp_enqueue_script(
+        'alpinejs', 
+        'https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js', 
+        array(), 
+        null, 
+        true
+    );
 }
 add_action('wp_enqueue_scripts', 'demnayhair_tailwind_enqueue_scripts');
 
