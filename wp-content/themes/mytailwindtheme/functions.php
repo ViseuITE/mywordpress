@@ -29,6 +29,7 @@ function demnayhair_tailwind_enqueue_scripts() {
         null, 
         true
     );
+    wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
 }
 add_action('wp_enqueue_scripts', 'demnayhair_tailwind_enqueue_scripts');
 
