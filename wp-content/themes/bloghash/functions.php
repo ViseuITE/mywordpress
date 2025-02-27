@@ -197,72 +197,75 @@ function demnayhair_tailwind_enqueue_scripts() {
         true
     );
     wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+	wp_enqueue_script('vue', 'https://unpkg.com/vue@3', array(), null, true);
+    wp_enqueue_script('vue-app', get_template_directory_uri() . '/assets/js/app.js', array(), null, true);
+
 }
 add_action('wp_enqueue_scripts', 'demnayhair_tailwind_enqueue_scripts');
 
 
 function create_live_rooms_cpt() {
     $labels = array(
-        'name' => __('Live Rooms', 'textdomain'),
-        'singular_name' => __('Live Room', 'textdomain'),
-        'menu_name' => __('Live Rooms'),
-        'all_items' => __('All Live Rooms'),
-        'add_new' => __('Add New Live Room'),
-        'add_new_item' => __('Add New Live Room'),
-        'edit_item' => __('Edit Live Room'),
-        'new_item' => __('New Live Room'),
-        'view_item' => __('View Live Room'),
-        'search_items' => __('Search Live Rooms'),
-        'not_found' => __('No live rooms found'),
+        'name'               => __('Live Rooms', 'textdomain'),
+        'singular_name'      => __('Live Room', 'textdomain'),
+        'menu_name'          => __('Live Rooms', 'textdomain'),
+        'name_admin_bar'     => __('Live Room', 'textdomain'),
+        'add_new'            => __('Add New', 'textdomain'),
+        'add_new_item'       => __('Add New Live Room', 'textdomain'),
+        'new_item'           => __('New Live Room', 'textdomain'),
+        'edit_item'          => __('Edit Live Room', 'textdomain'),
+        'view_item'          => __('View Live Room', 'textdomain'),
+        'all_items'          => __('All Live Rooms', 'textdomain'),
+        'search_items'       => __('Search Live Rooms', 'textdomain'),
+        'not_found'          => __('No Live Rooms found', 'textdomain'),
+        'not_found_in_trash' => __('No Live Rooms found in Trash', 'textdomain'),
     );
 
     $args = array(
-        'labels' => $labels,
-        'public' => true,
-        'has_archive' => true,
-        'menu_position' => 5,
-        'menu_icon' => 'dashicons-video-alt3',
-        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
-        'rewrite' => array('slug' => 'live-rooms'),
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array('slug' => 'live-room'),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 5,
+        'supports'           => array('title', 'editor', 'thumbnail', 'custom-fields'),
+        'show_in_rest'       => true, // Enables Gutenberg support
     );
 
     register_post_type('live_room', $args);
 }
-
 add_action('init', 'create_live_rooms_cpt');
 
 
-function live_room_custom_fields() {
-    add_meta_box(
-        'live_room_details',
-        __('Live Room Details', 'textdomain'),
-        'live_room_details_callback',
-        'live_room',
-        'normal',
-        'high'
+function create_live_room_taxonomy() {
+    $labels = array(
+        'name'          => __('Live Room Categories', 'textdomain'),
+        'singular_name' => __('Live Room Category', 'textdomain'),
+        'search_items'  => __('Search Categories', 'textdomain'),
+        'all_items'     => __('All Categories'),
+        'edit_item'     => __('Edit Category'),
+        'update_item'   => __('Update Category'),
+        'add_new_item'  => __('Add New Category'),
+        'new_item_name' => __('New Category Name'),
+        'menu_name'     => __('Categories'),
     );
-}
 
-function live_room_details_callback($post) {
-    $live_url = get_post_meta($post->ID, '_live_url', true);
-    $host_name = get_post_meta($post->ID, '_host_name', true);
-    ?>
-    <label for="live_url"><?php _e('Live Streaming URL:', 'textdomain'); ?></label>
-    <input type="text" name="live_url" id="live_url" value="<?php echo esc_attr($live_url); ?>" style="width: 100%;" />
-    <br><br>
-    <label for="host_name"><?php _e('Host Name:', 'textdomain'); ?></label>
-    <input type="text" name="host_name" id="host_name" value="<?php echo esc_attr($host_name); ?>" style="width: 100%;" />
-    <?php
-}
+    $args = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array('slug' => 'live-room-category'),
+    );
 
-function save_live_room_meta($post_id) {
-    if (isset($_POST['live_url'])) {
-        update_post_meta($post_id, '_live_url', sanitize_text_field($_POST['live_url']));
-    }
-    if (isset($_POST['host_name'])) {
-        update_post_meta($post_id, '_host_name', sanitize_text_field($_POST['host_name']));
-    }
+    register_taxonomy('live_room_category', array('live_room'), $args);
 }
+add_action('init', 'create_live_room_taxonomy');
 
-add_action('add_meta_boxes', 'live_room_custom_fields');
-add_action('save_post', 'save_live_room_meta');
+

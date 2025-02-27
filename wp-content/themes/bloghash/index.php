@@ -8,7 +8,7 @@
 
 	<?php do_action( 'bloghash_before_content_area', 'before_post_archive' ); ?>
 	
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area m-auto">
 
 		<?php do_action( 'bloghash_before_content' ); ?>
 

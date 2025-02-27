@@ -53,8 +53,8 @@
 						@mouseenter="open = true"
 						@mouseleave="open = false">
 						<a
-						class="rounded-md px-3 py-2 text-sm font-body text-gray-700 hover:bg-gray-700 hover:text-white"
-						href="#0"
+						class="rounded-md mb-1 py-2 hover-menu text-sm font-body text-gray-700  hover:text-white"
+						href="#0" 
 						:aria-expanded="open">LIVE SCHEDULES</a>
 
 						<ul
@@ -112,29 +112,29 @@
 					</li>
 
 					<li class="">
-						<a href="#" class="font-body rounded-md px-12 py-2 text-sm  text-gray-700 hover:bg-gray-700 hover:text-white">ODD RATE</a>
+						<a href="#" class="font-body rounded-md px-10 py-2 text-sm  text-gray-700  hover:text-white">ODD RATE</a>
 					</li>
 					<li class="">
-						<a href="#" class="font-body rounded-md px-12 py-2 text-sm  text-gray-700 hover:bg-gray-700 hover:text-white">SCHEDULES</a>
+						<a href="#" class="font-body rounded-md px-10 py-2 text-sm  text-gray-700  hover:text-white">SCHEDULES</a>
 					</li>
 					<li class="">
-						<a href="#" class="font-body rounded-md px-12 py-2 text-sm  text-gray-700 hover:bg-gray-700 hover:text-white">RESULT</a>
+						<a href="#" class="font-body rounded-md px-10 py-2 text-sm  text-gray-700  hover:text-white">RESULT</a>
 					</li>
 					<li class="">
-						<a href="#" class="font-body rounded-md px-12 py-2 text-sm  text-gray-700 hover:bg-gray-700 hover:text-white">ROOM CHAT</a>
+						<a href="#" class="font-body rounded-md px-10 py-2 text-sm  text-gray-700  hover:text-white">ROOM CHAT</a>
 					</li>
 					<li class="">
-						<a href="#" class="font-body rounded-md px-12 py-2 text-sm  text-gray-700 hover:bg-gray-700 hover:text-white">NEWS</a>
+						<a href="#" class="font-body rounded-md px-10 py-2 text-sm  text-gray-700  hover:text-white">NEWS</a>
 					</li>
 
 					<li class="">
-						<a href="#" class="font-body rounded-md bg-header border border-slate-400 text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Register</a>
+						<a href="#" class="font-body rounded-md bg-header border border-slate-400 text-gray-700   px-3 py-2 text-sm font-medium   hover:text-white">Register</a>
 					</li>
 					<li class="">
-						<a href="#" class="font-body rounded-md mx-8 bg-header border border-slate-400 text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Login</a>
+						<a href="#" class="font-body rounded-md mx-8 bg-header border border-slate-400 text-gray-700   px-3 py-2 text-sm font-medium   hover:text-white">Login</a>
 					</li>
 					<li class="">
-						<a href="#" class="font-body rounded-md px-3 py-2 text-sm text-gray-700 hover:bg-gray-700 hover:text-white font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Number</a>
+						<a href="#" class="font-body rounded-md px-3 py-2 text-sm text-gray-700  hover:text-white font-medium   ">Number</a>
 					</li>
 
 					</ul>

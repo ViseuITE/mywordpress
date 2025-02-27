@@ -44,3 +44,9 @@
     text-decoration: none;
 }
 
+.hover-menu:hover{
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #222;
+}
+
