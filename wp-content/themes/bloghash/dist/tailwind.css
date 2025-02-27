@@ -850,6 +850,8 @@ video {
     padding: 15px;
     border-radius: 8px;
     text-align: center;
+    background-color: #222;
+    color: white;
 }
 
 .live-room a {
@@ -935,3 +937,4 @@ video {
 .\[\&\[x-cloak\]\]\:hidden[x-cloak] {
   display: none;
 }
+

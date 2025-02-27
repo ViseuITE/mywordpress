@@ -9,12 +9,11 @@
     if ($query->have_posts()) :
         while ($query->have_posts()) : $query->the_post();
             $live_url = get_post_meta(get_the_ID(), '_live_url', true);
-            $host_name = get_post_meta(get_the_ID(), '_host_name', true);
     ?>
             <div class="live-room">
                 <h2><?php the_title(); ?></h2>
-                <p>Host: <?php echo esc_html($host_name); ?></p>
-                <a href="<?php echo esc_url($live_url); ?>" target="_blank">Enter Live Room</a>
+                <p><?php the_excerpt(); ?></p>
+                <a href="<?php echo esc_url($live_url); ?>" target="_blank">Watch Live</a>
             </div>
     <?php
         endwhile;

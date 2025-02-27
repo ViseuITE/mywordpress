@@ -30,6 +30,8 @@
     padding: 15px;
     border-radius: 8px;
     text-align: center;
+    background-color: #222;
+    color: white;
 }
 
 .live-room a {
@@ -41,3 +43,4 @@
     border-radius: 5px;
     text-decoration: none;
 }
+

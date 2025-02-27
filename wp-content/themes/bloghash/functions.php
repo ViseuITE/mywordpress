@@ -201,27 +201,68 @@ function demnayhair_tailwind_enqueue_scripts() {
 add_action('wp_enqueue_scripts', 'demnayhair_tailwind_enqueue_scripts');
 
 
-function live_rooms_shortcode() {
-    ob_start();
-    $args = array('post_type' => 'live_room', 'posts_per_page' => 5);
-    $query = new WP_Query($args);
+function create_live_rooms_cpt() {
+    $labels = array(
+        'name' => __('Live Rooms', 'textdomain'),
+        'singular_name' => __('Live Room', 'textdomain'),
+        'menu_name' => __('Live Rooms'),
+        'all_items' => __('All Live Rooms'),
+        'add_new' => __('Add New Live Room'),
+        'add_new_item' => __('Add New Live Room'),
+        'edit_item' => __('Edit Live Room'),
+        'new_item' => __('New Live Room'),
+        'view_item' => __('View Live Room'),
+        'search_items' => __('Search Live Rooms'),
+        'not_found' => __('No live rooms found'),
+    );
 
-    if ($query->have_posts()) :
-        echo '<div class="live-rooms-list">';
-        while ($query->have_posts()) : $query->the_post();
-            $live_url = get_post_meta(get_the_ID(), '_live_url', true);
-            echo '<div class="live-room-item">';
-            echo '<h2>' . get_the_title() . '</h2>';
-            echo '<a href="' . esc_url($live_url) . '" target="_blank">Watch Live</a>';
-            echo '</div>';
-        endwhile;
-        echo '</div>';
-        wp_reset_postdata();
-    else :
-        echo '<p>No live rooms available.</p>';
-    endif;
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => true,
+        'menu_position' => 5,
+        'menu_icon' => 'dashicons-video-alt3',
+        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
+        'rewrite' => array('slug' => 'live-rooms'),
+    );
 
-    return ob_get_clean();
+    register_post_type('live_room', $args);
 }
 
-add_shortcode('live_rooms', 'live_rooms_shortcode');
+add_action('init', 'create_live_rooms_cpt');
+
+
+function live_room_custom_fields() {
+    add_meta_box(
+        'live_room_details',
+        __('Live Room Details', 'textdomain'),
+        'live_room_details_callback',
+        'live_room',
+        'normal',
+        'high'
+    );
+}
+
+function live_room_details_callback($post) {
+    $live_url = get_post_meta($post->ID, '_live_url', true);
+    $host_name = get_post_meta($post->ID, '_host_name', true);
+    ?>
+    <label for="live_url"><?php _e('Live Streaming URL:', 'textdomain'); ?></label>
+    <input type="text" name="live_url" id="live_url" value="<?php echo esc_attr($live_url); ?>" style="width: 100%;" />
+    <br><br>
+    <label for="host_name"><?php _e('Host Name:', 'textdomain'); ?></label>
+    <input type="text" name="host_name" id="host_name" value="<?php echo esc_attr($host_name); ?>" style="width: 100%;" />
+    <?php
+}
+
+function save_live_room_meta($post_id) {
+    if (isset($_POST['live_url'])) {
+        update_post_meta($post_id, '_live_url', sanitize_text_field($_POST['live_url']));
+    }
+    if (isset($_POST['host_name'])) {
+        update_post_meta($post_id, '_host_name', sanitize_text_field($_POST['host_name']));
+    }
+}
+
+add_action('add_meta_boxes', 'live_room_custom_fields');
+add_action('save_post', 'save_live_room_meta');
