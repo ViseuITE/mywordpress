@@ -58,7 +58,7 @@
 						:aria-expanded="open">LIVE SCHEDULES</a>
 
 						<ul
-						class="origin-top-right absolute z-50 top-full left-1/2 -translate-x-1/2  bg-white border border-slate-200 p-2 rounded-lg shadow-xl [&[x-cloak]]:hidden"
+						class="origin-top-right box-hover absolute z-50 top-full left-1/2 -translate-x-1/2  bg-white border border-slate-200 p-2 rounded-lg shadow-xl [&[x-cloak]]:hidden"
 						x-show="open"
 						x-transition:enter="transition ease-out duration-200 transform"
 						x-transition:enter-start="opacity-0 -translate-y-2"
@@ -69,62 +69,66 @@
 						x-cloak
 						@focusout="await $nextTick();!$el.contains($focus.focused()) && (open = false)">
 						<li>
-							<a class="text-slate-800 hover:bg-slate-50 flex items-center p-2" href="#">
-							<div class="flex items-center justify-center bg-white border border-slate-200 rounded shadow-sm h-7 w-7 shrink-0 mr-3">
-								<svg class="fill-indigo-500" xmlns="http://www.w3.org/2000/svg" width="9" height="12">
-								<path d="M8.724.053A.5.5 0 0 0 8.2.1L4.333 3H1.5A1.5 1.5 0 0 0 0 4.5v3A1.5 1.5 0 0 0 1.5 9h2.833L8.2 11.9a.5.5 0 0 0 .8-.4V.5a.5.5 0 0 0-.276-.447Z" />
-								</svg>
-							</div>
-							<span class="whitespace-nowrap">Priority Ratings</span>
+							<a class="text-slate-800 hover-menu1 flex items-center p-2" href="#">
+								<div class="flex  items-center justify-center  shadow-sm w-10 h-10 shrink-0 mr-3">
+									<!-- <svg class="fill-indigo-500" xmlns="http://www.w3.org/2000/svg" width="9" height="12">
+									<path d="M8.724.053A.5.5 0 0 0 8.2.1L4.333 3H1.5A1.5 1.5 0 0 0 0 4.5v3A1.5 1.5 0 0 0 1.5 9h2.833L8.2 11.9a.5.5 0 0 0 .8-.4V.5a.5.5 0 0 0-.276-.447Z" />
+									</svg> -->
+									<img class="w-full h-full" src="https://demnay.hair/icon/10hover.webp" alt="">
+								</div>
+								<span class="whitespace-nowrap ">FOOTBALL</span>
 							</a>
 						</li>
 						<li class="py-4">
-							<a class="font-body text-slate-800 hover:bg-slate-50 flex items-center p-2" href="#">
-							<div class="flex items-center justify-center bg-white border border-slate-200 rounded shadow-sm h-7 w-7 shrink-0 mr-3">
-								<svg class="fill-indigo-500" xmlns="http://www.w3.org/2000/svg" width="12" height="12">
-								<path d="M11.953 4.29a.5.5 0 0 0-.454-.292H6.14L6.984.62A.5.5 0 0 0 6.12.173l-6 7a.5.5 0 0 0 .379.825h5.359l-.844 3.38a.5.5 0 0 0 .864.445l6-7a.5.5 0 0 0 .075-.534Z" />
-								</svg>
+							<a class=" hover-menu1 font-body text-slate-800 flex items-center p-2" href="#">
+							<div class="flex items-center justify-center shadow-sm w-10 h-10 shrink-0 mr-3">
+								<img class="w-full h-full" src="https://demnay.hair/icon/40hover.webp" alt="">
 							</div>
-							<span class="whitespace-nowrap">Insights</span>
+							<span class="whitespace-nowrap">MARBLE</span>
 							</a>
 						</li>
 						<li class="py-4">
-							<a class="font-body text-slate-800 hover:bg-slate-50 flex items-center p-2" href="#">
-							<div class="flex items-center justify-center bg-white border border-slate-200 rounded shadow-sm h-7 w-7 shrink-0 mr-3">
-								<svg class="fill-indigo-500" xmlns="http://www.w3.org/2000/svg" width="12" height="12">
-								<path d="M6 0a6 6 0 1 0 0 12A6 6 0 0 0 6 0ZM2 6a4 4 0 0 1 4-4v8a4 4 0 0 1-4-4Z" />
-								</svg>
+							<a class="font-body text-slate-800 hover-menu1 flex items-center p-2" href="#">
+							<div class="flex items-center justify-center shadow-sm w-10 h-10 shrink-0 mr-3">
+								<img class="w-full h-full" src="https://demnay.hair/icon/20hover.webp" alt="">
 							</div>
-							<span class="whitespace-nowrap">Item Mirror</span>
+							<span class="whitespace-nowrap">BASKIBALL</span>
 							</a>
 						</li>
 						<li class="py-4">
-							<a class="font-body text-slate-800 hover:bg-slate-50 flex items-center p-2" href="#">
-							<div class="flex items-center justify-center bg-white border border-slate-200 rounded shadow-sm h-7 w-7 shrink-0 mr-3">
-								<svg class="fill-indigo-500" xmlns="http://www.w3.org/2000/svg" width="11" height="11">
-								<path d="M10.866.134a.458.458 0 0 0-.481-.106L.302 3.695a.458.458 0 0 0-.014.856l4.4 1.76 1.76 4.4c.07.175.24.29.427.29h.007a.458.458 0 0 0 .424-.302L10.973.615a.458.458 0 0 0-.107-.48Z" />
-								</svg>
+							<a class="font-body text-slate-800 hover-menu1 flex items-center p-2" href="#">
+							<div class="flex items-center justify-center hover-menu1 shadow-sm w-10 h-10 shrink-0 mr-3">
+								<img class="w-full h-full" src="https://demnay.hair/icon/30hover.webp" alt="">
 							</div>
-							<span class="whitespace-nowrap">Support Center</span>
+							<span class="whitespace-nowrap">ESPORT</span>
+							</a>
+						</li>
+
+						<li class="py-4">
+							<a class="font-body text-slate-800 hover-menu1 flex items-center p-2" href="#">
+							<div class="flex items-center justify-center hover-menu1 shadow-sm w-10 h-10 shrink-0 mr-3">
+								<img class="w-full h-full" src="https://demnay.hair/icon/50hover.webp" alt="">
+							</div>
+							<span class="whitespace-nowrap">CASINO</span>
 							</a>
 						</li>
 						</ul>
 					</li>
 
 					<li class="">
-						<a href="#" class="font-body rounded-md px-10 py-2 text-sm  text-gray-700  hover:text-white">ODD RATE</a>
+						<a href="#" class="font-body rounded-md hover-menu px-10 py-2 text-sm  text-gray-700  hover:text-white">ODD RATE</a>
 					</li>
 					<li class="">
-						<a href="#" class="font-body rounded-md px-10 py-2 text-sm  text-gray-700  hover:text-white">SCHEDULES</a>
+						<a href="#" class="font-body rounded-md hover-menu px-10 py-2 text-sm  text-gray-700  hover:text-white">SCHEDULES</a>
 					</li>
 					<li class="">
-						<a href="#" class="font-body rounded-md px-10 py-2 text-sm  text-gray-700  hover:text-white">RESULT</a>
+						<a href="#" class="font-body rounded-md hover-menu px-10 py-2 text-sm  text-gray-700  hover:text-white">RESULT</a>
 					</li>
 					<li class="">
-						<a href="#" class="font-body rounded-md px-10 py-2 text-sm  text-gray-700  hover:text-white">ROOM CHAT</a>
+						<a href="#" class="font-body rounded-md hover-menu px-10 py-2 text-sm  text-gray-700  hover:text-white">ROOM CHAT</a>
 					</li>
 					<li class="">
-						<a href="#" class="font-body rounded-md px-10 py-2 text-sm  text-gray-700  hover:text-white">NEWS</a>
+						<a href="#" class="font-body rounded-md hover-menu px-10 py-2 text-sm  text-gray-700  hover:text-white">NEWS</a>
 					</li>
 
 					<li class="">
@@ -133,8 +137,15 @@
 					<li class="">
 						<a href="#" class="font-body rounded-md mx-8 bg-header border border-slate-400 text-gray-700   px-3 py-2 text-sm font-medium   hover:text-white">Login</a>
 					</li>
-					<li class="">
+					<!-- <li class="">
 						<a href="#" class="font-body rounded-md px-3 py-2 text-sm text-gray-700  hover:text-white font-medium   ">Number</a>
+					</li> -->
+					<li class="py-4">
+						<a class="font-body text-slate-800 hover-menu1 flex items-center p-2" href="#">
+						<div class="flex items-center justify-center hover-menu1 shadow-sm w-10 h-10 shrink-0 mr-3">
+							<img class="w-full h-full" src="https://demnay.hair/_amplify/image?url=%2Fuser%2Fframeavatar.png&w=1536&q=100" alt="">
+						</div>
+						</a>
 					</li>
 
 					</ul>
@@ -189,40 +200,47 @@
 					<ul class="flex flex-wrap items-center font-sans font-bold  text-sm">
 
 					<li
-						class="relative flex items-center "
+						class="relative flex items-center hover-menu2"
 						x-data="{ open: false }"
 						@mouseenter="open = true"
 						@mouseleave="open = false">
-						<i class="fa-solid fa-file font-body"></i>
+						<!-- <i class="fa-solid fa-file font-body"></i> -->
+						<img class="w-10 h-10" src="https://image.naybank.com/demnaylive/2025-01-15/4d30c77f333e642cd6c34681f40da8af.svg" alt="">
+
 						<a
-						class="font-body rounded-md px-3 py-2 text-sm hover:bg-gray-700 hover:text-white"
+						class="font-body rounded-md px-3 py-2 text-sm hover:text-white"
 						href="#0"
 						:aria-expanded="open"> Newsfeed</a>
 					</li>
 
-					<li class="font-body px-10 flex items-center">
-						<i class="fa-solid fa-file "></i>
-						<a class="font-body rounded-md px-3 py-2 text-sm hover:bg-gray-700 hover:text-white" href="#">Reels</a>
+					<li class="font-body px-10 flex items-center hover-menu2">
+						<img class="w-10 h-10" src="https://image.naybank.com/demnaylive/2025-01-15/ff76762f45afc086c9c869962377c9e1.svg" alt="">
+						<a class="font-body rounded-md px-3 py-2 text-sm hover:text-white" href="#">Reels</a>
 					</li>
 
-					<li class="font-body px-10 flex items-center">
-						<i class="fa-solid fa-file "></i>
-						<a class="font-body rounded-md px-3 py-2 text-sm hover:bg-gray-700 hover:text-white" href="#">Highlight</a>
+					<li class="font-body px-10 flex items-center hover-menu2">
+						<img class="w-10 h-10" src="https://image.naybank.com/demnaylive/2025-01-15/6c48c7c0acc2e2d71da6cf602784646c.svg" alt="">
+						<a class="font-body rounded-md px-3 py-2 text-sm hover:text-white" href="#">Highlight</a>
 					</li>
 
-					<li class="font-body px-10 flex items-center">
-						<i class="fa-solid fa-file "></i>
-						<a class="font-body rounded-md px-3 py-2 text-sm hover:bg-gray-700 hover:text-white" href="#">Odd Tip</a>
+					<li class="font-body px-10 flex items-center hover-menu2">
+						<img class="w-10 h-10" src="https://image.naybank.com/demnaylive/2025-01-15/561d29f38fe1219329193690c29f7de0.svg" alt="">
+						<a class="font-body rounded-md px-3 py-2 text-sm hover:text-white" href="#">Odd Tip</a>
 					</li>
 
-					<li class="font-body px-10 flex items-center">
-						<i class="fa-solid fa-file "></i>
-						<a class="font-body rounded-md px-3 py-2 text-sm hover:bg-gray-700 hover:text-white" href="#">Movie</a>
+					<li class="font-body px-10 flex items-center hover-menu2">
+						<img class="w-10 h-10" src="https://image.naybank.com/demnaylive/2025-01-15/19f6c0fddb336290a45aa2d10d453369.svg" alt="">
+						<a class="font-body rounded-md px-3 py-2 text-sm hover:text-white" href="#">Movie</a>
 					</li>
 
-					<li class="font-body px-10 flex items-center">
-						<i class="fa-solid fa-file "></i>
-						<a class="font-body rounded-md px-3 py-2 text-sm hover:bg-gray-700 hover:text-white" href="#">Comic</a>
+					<li class="font-body px-10 flex items-center hover-menu2">
+						<img class="w-10 h-10" src="https://image.naybank.com/demnaylive/2025-01-15/da9480c41c38cc795a47f7a8b100334d.svg" alt="">
+						<a class="font-body rounded-md px-3 py-2 text-sm hover:text-white" href="#">Comic</a>
+					</li>
+
+					<li class="font-body px-10 flex items-center hover-menu2">
+						<img class="w-10 h-10" src="https://demnay.hair/_amplify/image?url=%2FflagLanguages%2Funitedkingdom.svg&w=1536&q=100" alt="">
+						<a class="font-body rounded-md px-3 py-2 text-sm hover:text-white" href="#">ENGLISH</a>
 					</li>
 
 					
