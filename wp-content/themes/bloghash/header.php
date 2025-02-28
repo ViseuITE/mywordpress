@@ -10,8 +10,8 @@
 
 <body <?php body_class(); ?>>
 
-	<div class="flex font-body content-around w-auto bg-header m-0 p-0  border border-white">
-	<div class="box-logo w-1/4 flex ">
+	<div class="flex font-body content-around w-auto bg-header m-0 p-0  border border-white ">
+	<div class="box-logo flex w-full xl:w-1/4 lg:w-1/4 md:w-4/5 sm:w-4/5">
 		<div class="box-lo w-1/2 h-40 bg-slate-200 "></div>
 		<a class="text-center items-center w-1/2 " href="/mywordpress">
 			<video class=" object-cover h-40 w-full box-radius shadow-white " autoplay muted loop>
@@ -23,28 +23,28 @@
 		</a>
 		
 	</div>
-	<header class=" w-3/4 m-0 p-0">
+	<header class=" w-3/4  xl:w-3/4 lg:w-3/4 md:w-4/5 sm:w-4/5 m-0 p-0">
 		<nav class="bg-header ">
 		<div class="">
 			<div class="relative flex h-20 items-center justify-between">
 			<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
 				<!-- Mobile menu button-->
-				<button type="button" onclick="ToggleMenu(this)" name="menu" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-				<span class="absolute -inset-0.5"></span>
-				<span class="sr-only">Open main menu</span>
+				<!-- <button type="button" onclick="ToggleMenu(this)" name="menu" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+					<span class="absolute -inset-0.5"></span>
+					<span class="sr-only">Open main menu</span>
 
-				<svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-					<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-				</svg>
+					<svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+					</svg>
 
-				<svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-					<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-				</svg>
-				</button>
+					<svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+					</svg>
+				</button> -->
 			</div>
 			<div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-				<div class="hidden sm:ml-6 sm:block">
-				<div class="flex space-x-4">
+				<div class="hidden lg:flex ml-6">
+					<div class="flex space-x-4">
 					<ul class="flex flex-wrap items-center  text-sm">
 
 					<li
@@ -116,19 +116,19 @@
 					</li>
 
 					<li class="">
-						<a href="#" class="font-body rounded-md hover-menu px-10 py-2 text-sm  text-gray-700  hover:text-white">ODD RATE</a>
+						<a href="#" class="font-body rounded-md hover-menu mx-8  text-sm  text-gray-700  hover:text-white">ODD RATE</a>
 					</li>
 					<li class="">
-						<a href="#" class="font-body rounded-md hover-menu px-10 py-2 text-sm  text-gray-700  hover:text-white">SCHEDULES</a>
+						<a href="#" class="font-body rounded-md hover-menu mx-8  text-sm  text-gray-700  hover:text-white">SCHEDULES</a>
 					</li>
 					<li class="">
-						<a href="#" class="font-body rounded-md hover-menu px-10 py-2 text-sm  text-gray-700  hover:text-white">RESULT</a>
+						<a href="#" class="font-body rounded-md hover-menu mx-8  text-sm  text-gray-700  hover:text-white">RESULT</a>
 					</li>
 					<li class="">
-						<a href="#" class="font-body rounded-md hover-menu px-10 py-2 text-sm  text-gray-700  hover:text-white">ROOM CHAT</a>
+						<a href="#" class="font-body rounded-md hover-menu mx-8  text-sm  text-gray-700  hover:text-white">ROOM CHAT</a>
 					</li>
 					<li class="">
-						<a href="#" class="font-body rounded-md hover-menu px-10 py-2 text-sm  text-gray-700  hover:text-white">NEWS</a>
+						<a href="#" class="font-body rounded-md hover-menu mx-8 text-sm  text-gray-700  hover:text-white">NEWS</a>
 					</li>
 
 					<li class="">
@@ -137,9 +137,7 @@
 					<li class="">
 						<a href="#" class="font-body rounded-md mx-8 bg-header border border-slate-400 text-gray-700   px-3 py-2 text-sm font-medium   hover:text-white">Login</a>
 					</li>
-					<!-- <li class="">
-						<a href="#" class="font-body rounded-md px-3 py-2 text-sm text-gray-700  hover:text-white font-medium   ">Number</a>
-					</li> -->
+					
 					<li class="py-4">
 						<a class="font-body text-slate-800 hover-menu1 flex items-center p-2" href="#">
 						<div class="flex items-center justify-center hover-menu1 shadow-sm w-10 h-10 shrink-0 mr-3">
@@ -179,14 +177,14 @@
 		</div>
 
 		<!-- Mobile menu, show/hide based on menu state. -->
-		<div class="menu-link sm:hidden" id="mobile-menu">
+		<!-- <div class="menu-link sm:hidden" id="mobile-menu">
 			<div class="space-y-1 px-2 pb-3 pt-2">
 			<a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Dashboard</a>
 			<a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
 			<a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
 			<a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
 			</div>
-		</div>
+		</div> -->
 		</nav>
 		<nav class=" bg-slate-300">
 		<div class="">
@@ -195,57 +193,58 @@
 				</div>
 			<div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
 				
-				<div class="hidden sm:ml-6 sm:block">
-				<div class="flex space-x-4">
-					<ul class="flex flex-wrap items-center font-sans font-bold  text-sm">
+				<!-- <div class="hidden sm:ml-6 sm:block"> -->
+				<div class="hidden lg:flex ml-6">
+					<div class="flex space-x-4">
+						<ul class="flex flex-wrap items-center font-sans font-bold  text-sm">
 
-					<li
-						class="relative flex items-center hover-menu2"
-						x-data="{ open: false }"
-						@mouseenter="open = true"
-						@mouseleave="open = false">
-						<!-- <i class="fa-solid fa-file font-body"></i> -->
-						<img class="w-10 h-10" src="https://image.naybank.com/demnaylive/2025-01-15/4d30c77f333e642cd6c34681f40da8af.svg" alt="">
+						<li
+							class="relative flex items-center hover-menu2"
+							x-data="{ open: false }"
+							@mouseenter="open = true"
+							@mouseleave="open = false">
+							<!-- <i class="fa-solid fa-file font-body"></i> -->
+							<img class="w-10 h-10" src="https://image.naybank.com/demnaylive/2025-01-15/4d30c77f333e642cd6c34681f40da8af.svg" alt="">
 
-						<a
-						class="font-body rounded-md px-3 py-2 text-sm hover:text-white"
-						href="#0"
-						:aria-expanded="open"> Newsfeed</a>
-					</li>
+							<a
+							class="font-body rounded-md px-3 py-2 text-sm hover:text-white"
+							href="#0"
+							:aria-expanded="open"> Newsfeed</a>
+						</li>
 
-					<li class="font-body px-10 flex items-center hover-menu2">
-						<img class="w-10 h-10" src="https://image.naybank.com/demnaylive/2025-01-15/ff76762f45afc086c9c869962377c9e1.svg" alt="">
-						<a class="font-body rounded-md px-3 py-2 text-sm hover:text-white" href="#">Reels</a>
-					</li>
+						<li class="font-body px-10 flex items-center hover-menu2">
+							<img class="w-10 h-10" src="https://image.naybank.com/demnaylive/2025-01-15/ff76762f45afc086c9c869962377c9e1.svg" alt="">
+							<a class="font-body rounded-md px-3 py-2 text-sm hover:text-white" href="#">Reels</a>
+						</li>
 
-					<li class="font-body px-10 flex items-center hover-menu2">
-						<img class="w-10 h-10" src="https://image.naybank.com/demnaylive/2025-01-15/6c48c7c0acc2e2d71da6cf602784646c.svg" alt="">
-						<a class="font-body rounded-md px-3 py-2 text-sm hover:text-white" href="#">Highlight</a>
-					</li>
+						<li class="font-body px-10 flex items-center hover-menu2">
+							<img class="w-10 h-10" src="https://image.naybank.com/demnaylive/2025-01-15/6c48c7c0acc2e2d71da6cf602784646c.svg" alt="">
+							<a class="font-body rounded-md px-3 py-2 text-sm hover:text-white" href="#">Highlight</a>
+						</li>
 
-					<li class="font-body px-10 flex items-center hover-menu2">
-						<img class="w-10 h-10" src="https://image.naybank.com/demnaylive/2025-01-15/561d29f38fe1219329193690c29f7de0.svg" alt="">
-						<a class="font-body rounded-md px-3 py-2 text-sm hover:text-white" href="#">Odd Tip</a>
-					</li>
+						<li class="font-body px-10 flex items-center hover-menu2">
+							<img class="w-10 h-10" src="https://image.naybank.com/demnaylive/2025-01-15/561d29f38fe1219329193690c29f7de0.svg" alt="">
+							<a class="font-body rounded-md px-3 py-2 text-sm hover:text-white" href="#">Odd Tip</a>
+						</li>
 
-					<li class="font-body px-10 flex items-center hover-menu2">
-						<img class="w-10 h-10" src="https://image.naybank.com/demnaylive/2025-01-15/19f6c0fddb336290a45aa2d10d453369.svg" alt="">
-						<a class="font-body rounded-md px-3 py-2 text-sm hover:text-white" href="#">Movie</a>
-					</li>
+						<li class="font-body px-10 flex items-center hover-menu2">
+							<img class="w-10 h-10" src="https://image.naybank.com/demnaylive/2025-01-15/19f6c0fddb336290a45aa2d10d453369.svg" alt="">
+							<a class="font-body rounded-md px-3 py-2 text-sm hover:text-white" href="#">Movie</a>
+						</li>
 
-					<li class="font-body px-10 flex items-center hover-menu2">
-						<img class="w-10 h-10" src="https://image.naybank.com/demnaylive/2025-01-15/da9480c41c38cc795a47f7a8b100334d.svg" alt="">
-						<a class="font-body rounded-md px-3 py-2 text-sm hover:text-white" href="#">Comic</a>
-					</li>
+						<li class="font-body px-10 flex items-center hover-menu2">
+							<img class="w-10 h-10" src="https://image.naybank.com/demnaylive/2025-01-15/da9480c41c38cc795a47f7a8b100334d.svg" alt="">
+							<a class="font-body rounded-md px-3 py-2 text-sm hover:text-white" href="#">Comic</a>
+						</li>
 
-					<li class="font-body px-10 flex items-center hover-menu2">
-						<img class="w-10 h-10" src="https://demnay.hair/_amplify/image?url=%2FflagLanguages%2Funitedkingdom.svg&w=1536&q=100" alt="">
-						<a class="font-body rounded-md px-3 py-2 text-sm hover:text-white" href="#">ENGLISH</a>
-					</li>
+						<li class="font-body px-10 flex items-center hover-menu2">
+							<img class="w-10 h-10" src="https://demnay.hair/_amplify/image?url=%2FflagLanguages%2Funitedkingdom.svg&w=1536&q=100" alt="">
+							<a class="font-body rounded-md px-3 py-2 text-sm hover:text-white" href="#">ENGLISH</a>
+						</li>
 
-					
-					</ul>
-				</div>
+						
+						</ul>
+					</div>
 				</div>
 			</div>
 			</div>
